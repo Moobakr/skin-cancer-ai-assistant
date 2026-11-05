@@ -1,5 +1,46 @@
 # Explainable Multimodal Skin Cancer Screening Assistant
 
+## Original project publication
+
+This repository preserves the **recovered original student project** and its
+22-field EfficientNetB3 fusion model. Source was recovered from recorded edits
+and pre-edit file reads; original byte-level formatting cannot be certified.
+The untouched recovered source snapshot is tagged [`recovered-original-source`](https://github.com/Moobakr/skin-cancer-ai-assistant/tree/recovered-original-source).
+The application and training code are unchanged from that recovered snapshot.
+
+The later image-only versus five-field metadata experiment is published separately
+in **[skin-cancer-ai-research](https://github.com/Moobakr/skin-cancer-ai-research)**.
+
+### Verified original-model results
+
+| Metric | Result | Meaning |
+|---|---:|---|
+| Test top-1 accuracy | **69.3% (237/342)** | First predicted class is correct |
+| Test top-2 accuracy | **89.2% (305/342)** | Correct class is among the first two predictions |
+| Peak retained training top-2 accuracy | **94.2%** | Training-log figure, not test top-1 accuracy |
+
+The frozen original checkpoint was evaluated on its saved patient-disjoint test
+split, using a single image view and all 22 dataset metadata fields. This includes
+biopsy status; it does not establish performance with only the app's form inputs.
+The original app also applies contrast enhancement and five-view averaging, so
+the table is a model evaluation, not a measurement of the complete app pipeline.
+The exact metric used in the historic presentation remains unconfirmed.
+
+**Run the preserved model:** follow [the publication setup guide](docs/PUBLICATION.md).
+Download the compatible [original model bundle](https://github.com/Moobakr/skin-cancer-ai-assistant/releases/tag/original-model-v1)
+and extract it into the repository root. Patient images, per-patient split CSVs,
+databases and credentials are excluded. Without the bundle, the original app
+returns explicitly labelled placeholder predictions.
+
+See the [aggregate audit](docs/results/original_model_test_audit.json),
+[retained training log](docs/results/original_training_log.csv), and
+[recovery provenance](docs/RECOVERY.md). No source-code license has been selected.
+
+---
+
+The original project documentation follows. Its older setup examples and model-card
+placeholders are retained; use the publication guide and measured results above.
+
 A complete full-stack deep learning project for the **Skin Cancer / PAD-UFES-20** dataset.  
 It includes:
 

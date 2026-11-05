@@ -1,0 +1,184 @@
+{
+  "created_utc": "2026-11-05T13:50:56.666255+00:00",
+  "protocol": "Frozen original best checkpoint; original saved test split; single-view RGB TensorFlow resize; complete original dataset metadata; no augmentation or retraining.",
+  "model_and_bundle_sha256": {
+    "model.keras": "c3464e22bb2b4102da6f3819f3f3f4ff045086389f4cb4c4c5360cca8096d949",
+    "metadata_preprocessor.joblib": "ad41acc7a2497a795aee7e9755e6f597f4decf20ec5e85e14139e0f34dad79d3",
+    "metadata_schema.json": "eb3aebd85a3d8235e7e75d8e8bc33452f31b80be7e5d0cdfc15952922de8911b",
+    "class_names.json": "b2771ebaf3b5efea62a1b917f7dac1f7bdafa72dfc9f04b5fdd4cdadb06b6856"
+  },
+  "split_sha256": {
+    "train": "12d63611a2e8419eb03884d5daaa4b35f04cc43e37029c099aad1969a00263da",
+    "val": "4bafa4bd9618cbfe1cf949be7ffae186a937e6883d9d09fa8e3e1d1af70713f3",
+    "test": "79c3309760467d126ca6af0afa9a321a523648595cb9d9677d3a91775b728b67"
+  },
+  "split_images": {
+    "train": 1691,
+    "val": 337,
+    "test": 342
+  },
+  "split_patients": {
+    "train": 961,
+    "val": 206,
+    "test": 206
+  },
+  "patient_overlap": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "image_size": 300,
+  "metadata_fields": [
+    "smoke",
+    "drink",
+    "background_father",
+    "background_mother",
+    "age",
+    "pesticide",
+    "gender",
+    "skin_cancer_history",
+    "cancer_history",
+    "has_piped_water",
+    "has_sewage_system",
+    "fitspatrick",
+    "region",
+    "diameter_1",
+    "diameter_2",
+    "itch",
+    "grew",
+    "hurt",
+    "changed",
+    "bleed",
+    "elevation",
+    "biopsed"
+  ],
+  "top1_correct": 237,
+  "top2_correct": 305,
+  "sample_count": 342,
+  "top1_accuracy": 0.6929824561403509,
+  "top2_accuracy": 0.8918128609657288,
+  "balanced_accuracy": 0.5915845330380214,
+  "macro_f1": 0.5877593492552058,
+  "class_names": [
+    "ACK",
+    "BCC",
+    "MEL",
+    "NEV",
+    "SCC",
+    "SEK"
+  ],
+  "classification_report": {
+    "ACK": {
+      "precision": 0.7413793103448276,
+      "recall": 0.86,
+      "f1-score": 0.7962962962962963,
+      "support": 100.0
+    },
+    "BCC": {
+      "precision": 0.72,
+      "recall": 0.6428571428571429,
+      "f1-score": 0.6792452830188679,
+      "support": 112.0
+    },
+    "MEL": {
+      "precision": 0.3333333333333333,
+      "recall": 0.2,
+      "f1-score": 0.25,
+      "support": 5.0
+    },
+    "NEV": {
+      "precision": 0.7708333333333334,
+      "recall": 0.8809523809523809,
+      "f1-score": 0.8222222222222222,
+      "support": 42.0
+    },
+    "SCC": {
+      "precision": 0.22580645161290322,
+      "recall": 0.175,
+      "f1-score": 0.19718309859154928,
+      "support": 40.0
+    },
+    "SEK": {
+      "precision": 0.7727272727272727,
+      "recall": 0.7906976744186046,
+      "f1-score": 0.7816091954022989,
+      "support": 43.0
+    },
+    "accuracy": 0.6929824561403509,
+    "macro avg": {
+      "precision": 0.5940132835586116,
+      "recall": 0.5915845330380214,
+      "f1-score": 0.5877593492552058,
+      "support": 342.0
+    },
+    "weighted avg": {
+      "precision": 0.6756699663536208,
+      "recall": 0.6929824561403509,
+      "f1-score": 0.6812425555761316,
+      "support": 342.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      86,
+      3,
+      0,
+      2,
+      1,
+      8
+    ],
+    [
+      15,
+      72,
+      2,
+      1,
+      22,
+      0
+    ],
+    [
+      2,
+      1,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      0,
+      37,
+      0,
+      2
+    ],
+    [
+      9,
+      22,
+      0,
+      2,
+      7,
+      0
+    ],
+    [
+      3,
+      0,
+      0,
+      6,
+      0,
+      34
+    ]
+  ],
+  "retained_training_log_peaks": {
+    "accuracy": 0.7829686403274536,
+    "top2_acc": 0.9420461058616638,
+    "val_accuracy": 0.6824925541877747,
+    "val_top2_acc": 0.8872403502464294
+  },
+  "elapsed_seconds": 49.31,
+  "limitations": [
+    "The original metadata includes biopsy status; this evaluation does not establish performance from pre-diagnosis app inputs.",
+    "This evaluates the saved model under the original evaluation pipeline, not the API's contrast enhancement and five-view averaging.",
+    "Historic use of the saved test split before this audit cannot be established from the available records.",
+    "This does not establish which metric was used in the original presentation."
+  ]
+}
