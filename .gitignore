@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.env.*
+
+# Data and generated artifacts
+data/
+ai_model/artifacts/**
+!ai_model/artifacts/.gitkeep
+backend/model_bundle/**
+!backend/model_bundle/.gitkeep
+media/
+*.keras
+*.h5
+*.joblib
+*.pkl
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
